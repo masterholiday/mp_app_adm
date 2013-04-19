@@ -1,0 +1,68 @@
+@CHARSET "UTF-8";
+
+* { margin: 0px; padding: 0px; }
+html {
+    height: 100%;
+}
+table { border-collapse: collapse; border-spacing: 0; }
+th, td { text-align: left; vertical-align: top; }
+img { border: 0; }
+
+a { text-decoration: none; }
+
+div.clear {clear: both;}
+
+body {
+    height: 100%;
+    margin: 0;
+    min-height: 100%;
+    font-family: 'Myriad Pro';
+    background: #e6e6e6;
+}
+
+div.login {
+    width: 252px;
+    margin: 0px auto;
+    background: url(../images/loginlogo.png) center 45px no-repeat;
+    padding: 227px 0px 0px 0px;
+}
+
+div.login dd{
+    text-align: center;
+}
+
+div.login .error{
+    text-align: center;
+    color: #C00;
+    padding: 0px 0px 10px 0px;
+}
+
+input.login, input.fake, input.password {
+    width: 230px;
+    height: 30px;
+    background: #acacac !important;
+    border: 1px solid #212121;
+    font-size: 16px;
+    color: #FFF;
+    line-height: 30px;
+    padding: 0px 10px;
+    display: block;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+input[type="submit"] { 
+        background: url(../images/loginbutton.png) no-repeat;
+            margin: 11px auto;
+    cursor: pointer;
+    border: none;
+    width: 89px;
+	height: 35px;
+}
+
+input.dologin {
+    margin: 11px auto;
+    cursor: pointer;
+    border: none;
+    width: 89px;
+}

@@ -1,0 +1,853 @@
+@CHARSET "UTF-8";
+
+* { margin: 0px; padding: 0px; }
+html {
+    height: 100%;
+}
+table { border-collapse: collapse; border-spacing: 0; }
+th, td { text-align: left; vertical-align: top; }
+img { border: 0; }
+
+a { text-decoration: none; }
+
+div.clear {clear: both;}
+
+body {
+    height: 100%;
+    margin: 0;
+    min-height: 100%;
+    font-family: 'Arial';
+    /*background: url(../images/bodyb.png) top left repeat-y #e6e6e6;*/
+    background: #545454;
+    min-width: 1280px;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    min-width: 1280px;
+    max-width: 1440px;
+    margin: 0px auto;
+    background: url(../images/bodyb.png) top left repeat-y #e6e6e6;
+    position: relative;
+}
+
+.wrapper .footer {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: 0px;
+    left: 0px;
+    background: url(../images/bodyb.png) top left repeat-y #4f6fa9;
+}
+
+div.header {
+}
+
+div.header .left{
+    float: left;
+    height: 30px;
+    width: 200px;
+    background: #67a94f;
+}
+
+div.header .left .logo{
+    float: left;
+    margin: 2px 0px 0px 4px;
+    background: url(../images/smalllogo.png) top left no-repeat;
+    padding-left: 37px;
+    font-family: Arial;
+    height: 27px;
+    line-height: 27px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #20570c;
+    display: block;
+    cursor: pointer;
+}
+
+div.header .left .logout{
+    float: right;
+    margin: 5px 5px 0px 0px;
+}
+
+div.header .left .logout a{
+    display: block;
+    cursor: pointer;
+    width: 55px;
+    height: 21px;
+    text-align: center;
+    line-height: 21px;
+    font-family: Arial;
+    font-size: 14px;
+    color: #FFF;
+    text-transform: uppercase;
+    background: url(../images/logout.png) top left no-repeat;
+}
+
+div.header .right{
+    margin: 0px 0px 0px 30px;
+    background: #4f6fa9;
+    height: 30px;
+}
+
+div.menu {
+    float: left;
+    width: 200px;
+    padding: 1px 0px 0px 0px;
+}
+
+div.menu div.item {
+    padding: 7px 0px 10px 13px;
+    background: url(../images/menubrd.png) bottom left repeat-x;
+	    display: block;
+    font-family: Arial;
+    font-size: 13px;
+    color: #fffefe;
+}
+
+div.menu div.item  ul{
+list-style-position: inside;
+padding-left:10px;
+}
+div.menu div.item  li a,div.menu div.item  li{
+    font-family: Arial;
+	font-size: 13px;
+	color: #fffefe;
+	padding-top:2px;
+}
+
+div.menu div.item a{
+    display: block;
+    font-family: Arial;
+    font-size: 13px;
+    color: #fffefe;
+    padding-top: 7px;
+}
+
+table.evlist {
+    width: 100%;
+    border: 1px solid #212121;
+    border-left: none;
+    border-right: none;
+    border-collapse: collapse;
+    font-family: Arial;
+    font-weight: normal;
+}
+
+table.evlist tr{
+    border-top: 1px solid #212121;
+    border-bottom: 1px solid #212121;
+}
+
+table.evlist thead tr.sort {
+    background: #565759;
+    color: #FFF;
+    font-size: 13px;
+}
+
+table.evlist thead tr.sort th{
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    height: 25px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    cursor: pointer;
+}
+
+table.evlist thead tr.sort th.sortasc{
+    background: url(../images/listsortasc.png) right center no-repeat;
+}
+
+table.evlist thead tr.sort th.sortdesc{
+    background: url(../images/listsortdesc.png) right center no-repeat;
+}
+
+table.evlist thead tr.filter {
+    background: #aac385;
+    color: #000;
+    font-size: 13px;
+}
+
+table.evlist thead tr.filter th{
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    height: 25px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+table.evlist thead tr th.first{
+    border-left: none;
+    width: 35px;
+}
+table.evlist thead tr th.right {
+    border-right: none;
+}
+
+table.evlist .fixed65{
+    width: 61px;
+    padding: 0px 2px;
+}
+
+table.evlist .fixed190{
+    padding: 0px 2px;
+}
+
+table.evlist .fixed103{
+    width: 99px;
+    padding: 0px 2px;
+}
+
+table.evlist .fixed135{
+    width: 131px;
+    padding: 0px 2px;
+}
+
+table.evlist .fixed45{
+    width: 41px;
+    padding: 0px 2px;
+}
+table.evlist .fixed46{
+    width: 42px;
+    padding: 0px 2px;
+}
+
+table.evlist .fixed70{
+    width: 66px;
+    padding: 0px 2px;
+}
+table.evlist .fixed35{
+    width: 31px;
+    padding: 0px 2px;
+}
+
+table.evlist input {
+    height: 21px;
+    background: #FFF;
+    border: 1px solid #000;
+    line-height: 21px;
+    padding: 0px 3px;
+    font-family: Arial;
+    font-size: 11px;
+    color: #000;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+table.evlist tbody tr {
+
+}
+
+table.evlist tbody tr.light {
+    background: #f2f1f1;
+}
+
+table.evlist tbody tr.dark {
+    background: #d4d4d4;
+}
+
+table.evlist tbody tr:hover {
+    background: #bfd9b6;
+}
+
+table.evlist tbody tr td {
+    font-family: Arial;
+    font-size: 13px;
+    color: #313131;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1px 2px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+table.evlist tbody tr td.left {
+    border-left: none;
+}
+table.evlist tbody tr td.right {
+    border-right: none;
+}
+
+table.evlist tbody tr td span.id {
+    font-size: 12px;
+}
+table.evlist tbody tr td span.hours {
+    font-size: 12px;
+    display: block;
+}
+table.evlist tbody tr td span.time {
+    font-size: 12px;
+    color: #2a8a17;
+}
+table.evlist tbody tr td span.noprem {
+    color: #636363;
+}
+
+table.evlist tbody tr td a {
+    text-decoration: none;
+    font-size: 13px;
+    color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.selectbox-country {
+    vertical-align: middle;
+    cursor: pointer;
+    z-index: 6;
+}
+.selectbox-country .select {
+    width: 97px;
+    height: 17px;
+    border: 1px solid #000;
+    background: #FFF;
+    font-size: 13px;
+}
+
+.selectbox-country .select .trigger {
+    display: block;
+    width: 18px;
+    height: 17px;
+    float: right;
+    background: url(../images/selbar.png) 0px 0px no-repeat;
+}
+
+.selectbox-country ul.dropdown {
+    top: 19px;
+    left: 0px;
+    width: 97px;
+    margin: 0;
+    padding: 0;
+    background: #FFF;
+    border: 1px solid #000 !important;
+    border-top: none !important;
+    font-size: 13px;
+}
+.selectbox-country li {
+    padding: 2px;
+}
+.selectbox-country li:hover,
+.selectbox-country li.selected {
+    background: #59b104;
+    color: #FFF;
+}
+.selectbox-country li.disabled {
+    color: #AAA;
+}
+.selectbox-country li.disabled:hover {
+    background: none;
+}
+
+
+
+.selectbox-active {
+    vertical-align: middle;
+    cursor: pointer;
+    z-index: 6;
+}
+.selectbox-active .select {
+    width: 41px;
+    height: 17px;
+    border: 1px solid #000;
+    background: #FFF;
+    font-size: 13px;
+}
+
+.selectbox-active .select .trigger {
+    display: block;
+    width: 18px;
+    height: 17px;
+    float: right;
+    background: url(../images/selbar.png) 0px 0px no-repeat;
+}
+
+.selectbox-active ul.dropdown {
+    top: 19px;
+    left: 0px;
+    width: 41px;
+    margin: 0;
+    padding: 0;
+    background: #FFF;
+    border: 1px solid #000 !important;
+    border-top: none !important;
+    font-size: 13px;
+}
+.selectbox-active li {
+    padding: 2px;
+}
+.selectbox-active li:hover,
+.selectbox-active li.selected {
+    background: #59b104;
+    color: #FFF;
+}
+.selectbox-active li.disabled {
+    color: #AAA;
+}
+.selectbox-active li.disabled:hover {
+    background: none;
+}
+
+
+
+
+.selectbox-premium {
+    vertical-align: middle;
+    cursor: pointer;
+    z-index: 6;
+}
+.selectbox-premium .select {
+    width: 59px;
+    height: 17px;
+    border: 1px solid #000;
+    background: #FFF;
+    font-size: 13px;
+}
+
+.selectbox-premium .select .trigger {
+    display: block;
+    width: 18px;
+    height: 17px;
+    float: right;
+    background: url(../images/selbar.png) 0px 0px no-repeat;
+}
+
+.selectbox-premium ul.dropdown {
+    top: 19px;
+    left: 0px;
+    width: 59px;
+    margin: 0;
+    padding: 0;
+    background: #FFF;
+    border: 1px solid #000 !important;
+    border-top: none !important;
+    font-size: 13px;
+}
+.selectbox-premium li {
+    padding: 2px;
+}
+.selectbox-premium li:hover,
+.selectbox-premium li.selected {
+    background: #59b104;
+    color: #FFF;
+}
+.selectbox-premium li.disabled {
+    color: #AAA;
+}
+.selectbox-premium li.disabled:hover {
+    background: none;
+}
+
+
+
+
+
+
+
+.selectbox-perpage {
+    vertical-align: middle;
+    cursor: pointer;
+    z-index: 7;
+    float: left;
+}
+.selectbox-perpage .select {
+    width: 60px;
+    height: 22px;
+    border: 1px solid #000;
+    background: #FFF;
+    font-size: 15px;
+    text-align: center;
+    line-height: 22px;
+    color: #2c3034;
+    font-family: Arial;
+}
+
+.selectbox-perpage .select .trigger {
+    display: block;
+    width: 25px;
+    height: 22px;
+    float: right;
+    background: url(../images/selbar2.png) 0px 0px no-repeat;
+}
+
+.selectbox-perpage ul.dropdown {
+    top: 24px;
+    left: 0px;
+    width: 60px;
+    margin: 0;
+    padding: 0;
+    background: #FFF;
+    border: 1px solid #000 !important;
+    border-top: none !important;
+    font-size: 15px;
+    text-align: center;
+}
+.selectbox-perpage li {
+    padding: 2px;
+}
+.selectbox-perpage li:hover,
+.selectbox-perpage li.selected {
+    background: #59b104;
+    color: #FFF;
+}
+.selectbox-perpage li.disabled {
+    color: #AAA;
+}
+.selectbox-perpage li.disabled:hover {
+    background: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.sbp_left {
+    float: left;
+    font-size: 15px;
+    color: #FFF;
+    font-style: italic;
+    font-family: Arial;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 0px 0px 10px;
+}
+
+div.sbp_left b{
+    font-weight: bold;
+}
+
+div.sbp_right {
+    float: right;
+    height: 27px;
+    padding: 3px 1px 0px 0px;
+}
+
+div.sbp_right .currpage {
+    display: block;
+    float: left;
+    width: 65px;
+    height: 22px;
+    border: 1px solid #000;
+    background: #f2f2f2;
+    margin: 0px 12px;
+    position: relative;
+}
+
+div.sbp_right .currpage input{
+    background: none;
+    border: none;
+    width: 25px;
+    font-size: 16px;
+    color: #2c3034;
+    font-family: Arial;
+    position: absolute;
+    top: 1px;
+    left: 7px;
+    text-align: center;
+}
+
+div.sbp_right .currpage span.getpage{
+    background: url(../images/ok.png);
+    width: 23px;
+    height: 22px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+div.sbp_right a.excel {
+    display: block;
+    float: left;
+    margin-top: -2px;
+    margin-left: 5px;
+}
+
+.image {
+padding: 0;
+margin: 5px;
+float: left;
+width: 100px;
+height: 100px;
+border-radius: 5px 5px;
+border: 2px solid #7B7B7B;
+overflow: hidden;
+}
+
+.table1 input[type=text] {
+	font-family: Arial, Sans-Serif;
+	font-size: 15px;
+	width: 220px;
+	height:20px;
+	border: solid 1px #000;
+	padding-left:5px;
+	margin-left:25px;
+}
+
+.table1{
+border-collapse: collapse;
+margin-top:5px;
+float:left;
+font-size:14px;
+color:#505050;
+}
+
+.table1 td{
+padding:2px;
+}
+
+
+.table2 input[type=text] {
+	font-family: Arial, Sans-Serif;
+	font-size: 15px;
+	width: 80px;
+	height:20px;
+	border: solid 1px #000;
+	padding-left:5px;
+	text-align:center;
+}
+
+.table2{
+border-collapse: collapse;
+margin-top:5px;
+float:left;
+font-size:14px;
+color:#505050;
+margin-left:10px;
+width: 500px;
+}
+
+.table2 td{
+padding:2px;
+}
+
+
+.hints {
+padding: 0px 0px 10px 0px;
+margin: 5px 0px 0px 0px;
+float: right;
+width: 185px;
+border-bottom: 1px solid #E1EAE6;
+border-top: 1px solid #E1EAE6;
+background: #C0D8DE;
+height:200px;
+}
+
+.hints ul {
+margin: 0px 0px 0px 15px;
+padding: 0px;
+list-style: none;
+}
+
+.infoprem{
+font-weight: bold;
+color:#339622;
+}
+
+.infofree{
+font-weight: bold;
+color:#af3b3b;
+}
+
+
+
+.submit{  
+	background: url(../images/save.png) top left no-repeat;
+	display: inline-block;
+	line-height: 25px;
+    height: 27px;
+    margin: 10px auto;
+    cursor: pointer;
+    border: none;
+    width: 120px;
+	text-align: center;
+	color: #FFF;
+	font-size: 15px;
+}
+
+
+.submit2{  
+	background: url(../images/save.png) top left no-repeat;
+	display: inline-block;
+	line-height: 25px;
+    height: 27px;
+    margin: 10px auto;
+    cursor: pointer;
+    border: none;
+    width: 120px;
+	text-align: center;
+	color: #FFF;
+	font-size: 11px;
+}
+
+textarea{ 
+font-family: Arial, Sans-Serif;
+	font-size: 15px;
+	width: 98%;
+	height:150px;
+	border: solid 1px #000;
+}
+
+.divide{
+height: 5px;
+margin:5px;
+background: url(../images/brd.png) bottom left repeat-x;
+width:98%;
+}
+
+form{
+font-size:14px;
+color:#505050;
+}
+
+
+#tablehead{
+background:#505b5d;
+color:white;
+padding:10px;
+}
+
+.pTable thead th {
+background:#505b5d;
+color:white;
+padding:5px;
+font-weight:normal;
+}
+.pTable tr td {
+padding-right: 5px;
+padding-top: 5px;
+
+}
+
+.styled select {
+   background: transparent;
+   width: 250px;
+  /* padding: 5px;*/
+   font-size: 12px;
+   border: 1px solid #ccc;
+   height: 26px;
+    -webkit-appearance: none;
+} 
+
+.styled{
+   width: 250px;
+   height: 26px;
+   overflow: hidden;
+   background: url(../images/down.png) no-repeat 99% #fff;
+}
+
+.deleteVideo{
+   background: url(../images/X.png) no-repeat 100%;
+    cursor: pointer;
+    border: none;
+    width: 14px;
+	height: 14px;
+	margin-top:5px;
+	margin-left:5px;
+}
+
+
+.saveVideo{
+    background: url(../images/S.png) no-repeat 100%;
+    cursor: pointer;
+    border: none;
+    width: 23px;
+	height: 22px;
+}
+
+.deleteServ{
+    background: url(../images/X.png) no-repeat 100%;
+    cursor: pointer;
+    border: none;
+    width: 14px;
+	height: 14px;
+	margin-top:5px;
+	margin-left:5px;
+}
+
+
+.saveServ{
+   background: url(../images/S.png) no-repeat 100%;
+    cursor: pointer;
+    border: none;
+    width: 23px;
+	height: 23px;
+
+}
+
+ .pTable input[type=text] {
+	font-family: Arial, Sans-Serif;
+	font-size: 13px;
+	width: 150px;
+	height:23px;
+	border: solid 1px #000;
+	padding-left:5px;
+	text-align:center;
+}
+
+ .video input[type=text] {
+	font-family: Arial, Sans-Serif;
+	font-size: 13px;
+	width: 190px;
+	height:23px;
+	border: solid 1px #000;
+	padding-left:5px;
+	text-align:left;
+}
+h3{
+font-size: 15px;
+font-weight:normal;
+margin-bottom:5px;
+}
+
+.button{
+ background: url(../images/save.png) no-repeat;
+    margin: 11px auto;
+    cursor: pointer;
+    border: none;
+    width: 150px;
+	height: 35px;
+}
+
+.closeb{
+   background: url(../images/X.png) no-repeat 100%;
+    cursor: pointer;
+    border: none;
+    width: 15px;
+	height: 15px;
+	position: absolute;
+margin: 2px -22px;
+
+}
