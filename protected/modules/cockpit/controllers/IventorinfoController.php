@@ -505,6 +505,7 @@ class IventorinfoController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Iventorinfo');
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
